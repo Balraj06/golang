@@ -21,7 +21,6 @@ func copy1(a []int, start int, stop int) []int {
 func main() {
 	a := []int{0, 0, 0}
 
-	//copy1 := append(copy1, A...)
 	q := 2
 	values := [][]int{}
 	for i := 1; i <= q; i++ {
