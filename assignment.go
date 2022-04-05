@@ -6,23 +6,21 @@ import (
 )
 
 //get subset of array
-func copy1(a []int, start int, stop int) []int {
+func getSubset(a []int, start int, stop int) []int {
 	dest := make([]int, stop-start)
 	var flag int = 0
 	for i := start; i < stop; i++ {
 		dest[flag] = a[i]
 		flag++
 	}
-	//fmt.Println(flag)
 	return dest[:]
 
 }
 
 func main() {
 	a := []int{0, 0, 0}
-
-	//copy1 := append(copy1, A...)
-	q := 2
+	
+	q := 2 //input
 	values := [][]int{}
 	for i := 1; i <= q; i++ {
 		fmt.Printf("Enter the elements for %v query ", i)
@@ -40,7 +38,7 @@ func main() {
 
 		if values[i][0] == 1 {
 
-			A := copy1(a, values[i][1], values[i][2])
+			A := getSubset(a, values[i][1], values[i][2])
 			size := len(A)
 			for j := 0; j < size; j++ {
 				if j == 0 {
